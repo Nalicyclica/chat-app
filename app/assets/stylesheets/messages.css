@@ -11,11 +11,38 @@
   height: 100px;
   background-color: #253141;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.user-name a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+.new-room-btn a{
+  padding: 14px;
+  border: 1px solid lightblue;
+  font-size: 10px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
 .side-rooms{
   height: calc(100vh - 100px);
   background-color: #2F3E51;
   padding: 0 20px;
+}
+
+.room-names{
+  list-style: none;
+}
+.room-name{
+  padding: 20px 0 40px;
+}
+.room-name a{
+  color: white;
+  text-decoration: none;
 }
 
 .main-chat{
