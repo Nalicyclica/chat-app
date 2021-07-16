@@ -9,87 +9,17 @@
 
 <div class="chat-messages">
   <ul class="post-messages">
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
-    <li class="post-message">
-      <div class="message-header">
-        <div class="message-user">Tom</div>
-        <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-      </div>
-      <div class="message-main">
-        おはよう
-      </div>
-    </li>
+
   </ul>
 </div>
-<div class="chat-form">
+<%= form_with model: [@room, @message], class: 'chat-form', local: true do |f| %>
   <div class="message-form">
-    <input type="text" placeholder="type a message" class="message-form-text">
+   <%= f.text_field :content, class: 'message-form-text', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input type="submit" value="送信" class="message-form-submit">
-</div>
+  <%= f.submit '送信', class: 'message-form-submit' %>
+<% end %>
+
