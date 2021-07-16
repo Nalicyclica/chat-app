@@ -9,7 +9,7 @@
 
 <div class="chat-messages">
   <ul class="post-messages">
-
+    <%= render partial: "message", collection: @messages %>
   </ul>
 </div>
 <%= form_with model: [@room, @message], class: 'chat-form', local: true do |f| %>
